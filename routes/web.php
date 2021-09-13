@@ -1,8 +1,7 @@
-<?php
 
+<?php
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,10 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
- Route::get('/baiviet','App\Http\Controllers\PostController@index');
- Route::get('/baiviet/create','App\Http\Controllers\PostController@create');
- Route::get('/baiviet/{id}/{slug?}', 'App\Http\Controllers\PostController@show')->name('page.show');
+
+// Route::get("baiviet", "ArticleController@View")->name("ArticleView");
+Route::resource('/','ArticleController');
+Route::resource('/baiviet','ArticleController');
+Route::get('baiviet/{id}/{slug?}', 'ArticleController@show');
+Route::get('/search','ArticleController@search');
+
+ Route::resource('admin','AdminController')->middleware('AdminRole');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
