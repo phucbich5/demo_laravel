@@ -6,10 +6,9 @@ h1{
     margin-bottom: -25px;
 }
 </style>
+@extends('layouts.app')
 
-
-
-
+@section('content')
 <div class="form_create">
     <h1>Thêm Bài Viết Mới</h1> <br>
     <form action="{{ route('baiviet.store') }}" method="post">
@@ -36,3 +35,4 @@ h1{
         </div>
     </form>
 </div>
+@endsection

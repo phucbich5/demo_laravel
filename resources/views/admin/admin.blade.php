@@ -1,8 +1,9 @@
 @extends('layouts.app')
+
 @section('content')
 <h1>Danh sach bai viet</h1>
 
-<div class="btn_add"><a href="baiviet/create">Thêm bài viết</a></div>
+<div class="btn_add"><a href="{{ route('baiviet.create') }}">Thêm bài viết</a></div>
 <div class="search">
     <form action="{{ url('/search') }}" method="get">
         <input type="search" name="key" placeholder="Nhập bài viết cần tìm">
@@ -40,6 +41,7 @@
 <div>
     {{ $articles -> links() }}
 </div>
+@endsection
 <style>
     .post {
         text-align: center;

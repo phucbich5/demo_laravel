@@ -2,6 +2,7 @@
 
 @section('content')
 <h1>Danh sach bai viet</h1>
+<div class="btn_add"><a href="admin">Vào trang admin</a></div>
 <table class="table">
     <thead>
         <tr>

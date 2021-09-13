@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <div class="show">
     <h1><span>Tiêu đề:</span>{{ $item->title }}</h1>
     <h3> <span>Nội Dung:</span> {{ $item->content }}</h3>
@@ -12,3 +14,4 @@
         font-weight: bold;
     }
 </style>
+@endsection

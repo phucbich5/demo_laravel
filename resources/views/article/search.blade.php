@@ -1,4 +1,6 @@
 @extends('layouts.app')
+
+@section('content')
 <h1>Danh Sách Bài Viết</h1>
 <div class="btn_add"><a href="baiviet">Danh sách bài viết</a></div>
 <div class="search">
@@ -38,6 +40,7 @@
     </tbody>
 
 </table>
+@endsection
 <style>
     .post {
         text-align: center;

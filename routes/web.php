@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-
 // Route::get("baiviet", "ArticleController@View")->name("ArticleView");
 Route::resource('/','ArticleController');
 Route::resource('/baiviet','ArticleController');
@@ -27,5 +26,3 @@ Route::get('/search','ArticleController@search');
  Route::resource('admin','AdminController')->middleware('AdminRole');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
