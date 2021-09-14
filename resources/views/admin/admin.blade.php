@@ -6,6 +6,7 @@
 <div class="btn_add"><a href="{{ route('baiviet.create') }}">Thêm bài viết</a></div>
 <div class="search">
     <form action="{{ url('/search') }}" method="get">
+        @csrf
         <input type="search" name="key" placeholder="Nhập bài viết cần tìm">
         <button type="submit" id="searchsubmit">Tìm Kiếm</button>
     </form>

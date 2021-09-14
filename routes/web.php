@@ -24,8 +24,8 @@ Route::resource('/baiviet','ArticleController');
 Route::get('baiviet/{id}/{slug?}', 'ArticleController@show');
 Route::get('/search','ArticleController@search');
 
- Route::resource('admin','AdminController')->middleware('AdminRole');
+Route::resource('admin','AdminController')->middleware('AdminRole');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'ArticleController@index')->name('home');
