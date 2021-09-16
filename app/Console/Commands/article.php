@@ -3,8 +3,10 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use App\Models\ArticleModel as AricleModel;
+use App\Models\ArticleModel;
 
-class article_cron extends Command
+class article extends Command
 {
     /**
      * The name and signature of the console command.
@@ -38,6 +40,10 @@ class article_cron extends Command
     public function handle()
     {
         //
-        
+        // echo "abc";
+        ArticleModel::create([
+            'title'=>" bich ".time(),
+            "content"=> "dep trai".time(),
+        ]);
     }
 }
