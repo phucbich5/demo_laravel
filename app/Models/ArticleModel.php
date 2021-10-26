@@ -13,7 +13,8 @@ class ArticleModel extends Model
         'content'
     ];
 
-    public function Article(){
-        return $this->hasMany('App\Article');
+    public function categories()
+    {
+        return $this->belongsToMany('App\Models\Category');
     }
 }

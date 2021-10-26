@@ -27,7 +27,6 @@ class ArticleController extends Controller
         // $article = ArticleModel::find(1);
         // echo $article->title;
 
-
         // $articles=ArticleModel::all();
         // foreach($articles as $article){
         //     echo $article->title;
@@ -74,7 +73,6 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        //
         $item = ArticleModel::find($id);
         return view('article.show', compact('item'));
     }

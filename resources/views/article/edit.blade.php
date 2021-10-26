@@ -15,7 +15,6 @@
     </div>
     @endif
 
-
     <form action="{{ route('baiviet.update', $item->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         @method('PATCH')

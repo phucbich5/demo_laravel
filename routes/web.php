@@ -29,3 +29,5 @@ Route::resource('admin','AdminController')->middleware('AdminRole');
 Auth::routes();
 
 Route::get('home', 'ArticleController@index')->name('home');
+
+Route::resource('/category', 'CategoryController');

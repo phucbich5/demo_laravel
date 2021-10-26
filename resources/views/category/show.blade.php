@@ -17,7 +17,7 @@
         <tr>
             <td>{{ $article->id}}</td>
             <td style="text-align:left">{{ mb_substr($article->title , 0 , 30 ). '...' }}</td>
-            <td style="text-align:left">{{ mb_substr($article->content , 0 , 50 ). '...'  }}</td>
+            <td style="text-align:left">{{ mb_substr($article->content , 0 , 50 ). '...'  }}</td> 
             <td class="td1"><button><a href="{{ url('/baiviet/' . $article->id . '/' . Str::slug($article->title, '-')) }}">xem</a></td>
         </tr>
         @endforeach
